@@ -1,7 +1,7 @@
 (def project 'avulias-botti)
 (def version "0.1.0-SNAPSHOT")
 
-(set-env! :resource-paths #{"src"}
+(set-env! :resource-paths #{"resources" "src"}
           :dependencies   '[[org.clojure/clojure "1.8.0" :scope "provided"]
                             [aleph "0.4.2-alpha8"]
                             [compojure "1.5.0"]
