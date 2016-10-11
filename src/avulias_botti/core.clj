@@ -17,7 +17,7 @@
   (handlers/command "huoltomies" {{chat-id :id} :chat} (huoltomies chat-id))
   (handlers/command "apua" {{chat-id :id} :chat} (apua chat-id))
   (handlers/command "help" {{chat-id :id} :chat} (apua chat-id))
-  (handlers/message message (println "Got messagke" message)))
+  (handlers/message message (println "Got message" message)))
 
 
 (defn start []
