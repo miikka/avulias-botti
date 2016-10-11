@@ -22,5 +22,5 @@
 
 (defn -main [& [port]]
   (let [port (Integer. (or port (env :port) 5000))]
-    (-> (http/start-server (-> (api #'app) (wrap-json-body)) {:port port})
+    (-> (http/start-server (-> (api #'app) (wrap-json-body {:keywords? true})) {:port port})
         (netty/wait-for-close))))
