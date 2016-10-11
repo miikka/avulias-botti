@@ -6,19 +6,19 @@
 
 1. Luo itsellesi Telegram-botti [BotFatherin avulla](https://telegram.me/botfather).
 2. Luo tiedosto `.lein-env` ja laita siihen BotFatherilta saamasi token:
-
-       {:telegram-token "tähän se token"}
+       
+        {:telegram-token "tähän se token"}
 
 3. Käynistä REPL:
 
-       boot repl
+        boot repl
 
 4. Aja:
 
-       (require '[avulias-botti.core :as bot])
-       (def bot (bot/start))
-       ;; ...nyt se toimii...
-       (bot/stop bot)
+        (require '[avulias-botti.core :as bot])
+        (def bot (bot/start))
+        ;; ...nyt se toimii...
+        (bot/stop bot)
 
 ## Tuotanto
 
