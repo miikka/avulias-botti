@@ -32,3 +32,6 @@
           (jar)
           (sift :include #{#"avulias-botti-standalone.jar"})
           (target :dir dir))))
+
+(require '[avulias-botti.tasks :as tasks])
+(deftask setup-webhook [] (tasks/setup-webhook))
