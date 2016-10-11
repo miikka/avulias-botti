@@ -22,7 +22,7 @@
 
 ## Tuotanto
 
-    git push heroku master
+`master`-branch menee automaattisesti tuotantoon. Ole siis varovainen.
 
 ## Lisenssi
 
