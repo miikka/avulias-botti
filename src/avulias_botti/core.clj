@@ -8,10 +8,6 @@
 
 (def +token+ (env :telegram-token))
 
-(defn send-sticker [token chat-id sticker]
-  (api/assert-file-type sticker ["webp"])
-  (api/send-file token chat-id {} sticker "/sendSticker" "sticker" "sticker.webp"))
-
 (defn huoltomies [chat-id]
   (api/send-text +token+ chat-id "Satakuntatalon huoltopäivystys puh. 050-2861"))
 
@@ -20,7 +16,7 @@
                  "Osaan seuraavat asiat: /anssikela, /huoltomies, /lansimetro, /logorauma"))
 
 (defn logo-rauma [chat-id]
-  (send-sticker +token+ chat-id (io/file "resources/rauma.webp")))
+  (api/send-sticker +token+ chat-id (io/file "resources/rauma.webp")))
 
 (defn reply-to [message body]
   (let [chat-id (-> message :chat :id)

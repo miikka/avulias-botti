@@ -5,6 +5,6 @@
 
 
 (defn setup-webhook []
-  (api/set-webhook (delay (env :telegram-token))
+  (api/set-webhook (env :telegram-token)
                    (str "https://avulias-botti.herokuapp.com/webhook/"
                         (env :webhook-id) "/")))

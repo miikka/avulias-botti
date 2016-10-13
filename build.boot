@@ -7,7 +7,7 @@
                             [compojure "1.5.0"]
                             [environ "1.1.0"]
                             [javax.servlet/servlet-api "2.5"]
-                            [morse "0.2.0"]
+                            [morse "0.2.1"]
                             [ring/ring-json "0.4.0"]])
 
 (task-options!
