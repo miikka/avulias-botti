@@ -17,7 +17,7 @@
 
 (defn apua [chat-id]
   (api/send-text +token+ chat-id
-                 "Osaan seuraavat asiat: /anssikela, /huoltomies, /logorauma"))
+                 "Osaan seuraavat asiat: /anssikela, /huoltomies, /lansimetro, /logorauma"))
 
 (defn logo-rauma [chat-id]
   (send-sticker +token+ chat-id (io/file "resources/rauma.webp")))
