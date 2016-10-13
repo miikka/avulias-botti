@@ -28,9 +28,11 @@
     (api/send-text +token+ chat-id options body)))
 
 (defn anssi-kela [message]
-  (prn :msg message)
   (let [name (-> message :from :first_name)]
     (reply-to message (format "%s, Anssi Kela -nimesi on _%s Kela_." name name))))
+
+(defn lansimetro [message]
+  (reply-to message "Onko Länsimetro valmis? *Ei*."))
 
 (handlers/defhandler bot-api
   (handlers/command "huoltomies" {{chat-id :id} :chat} (huoltomies chat-id))
@@ -38,6 +40,7 @@
   (handlers/command "help" {{chat-id :id} :chat} (apua chat-id))
   (handlers/command "logorauma" {{chat-id :id} :chat} (logo-rauma chat-id))
   (handlers/command "anssikela" message (anssi-kela message))
+  (handlers/command "lansimetro" message (lansimetro message))
   (handlers/message message (println "Got message" message)))
 
 (defn start []
