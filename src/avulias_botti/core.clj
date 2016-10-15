@@ -1,5 +1,6 @@
 (ns avulias-botti.core
   (:require
+   [com.stuartsierra.component :as component]
    [environ.core :refer [env]]
    [morse.api :as api]
    [morse.handlers :as handlers]
@@ -44,3 +45,13 @@
 
 (defn stop [channel]
   (polling/stop channel))
+
+(defrecord LongPolling [channel]
+  component/Lifecycle
+  (start [component]
+    (assoc component :channel (start)))
+  (stop [component]
+    (stop channel)
+    (assoc component :channel nil)))
+
+(defn new-system [] (component/system-map :polling (map->LongPolling {})))

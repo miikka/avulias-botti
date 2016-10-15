@@ -15,10 +15,9 @@
 
 4. Aja:
 
-        (require '[avulias-botti.core :as bot])
-        (def bot (bot/start))
+        (go)
         ;; ...nyt se toimii...
-        (bot/stop bot)
+        (stop)
 
 ## Tuotanto
 
