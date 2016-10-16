@@ -1,4 +1,4 @@
-# Avulias Telegram-botti
+# Avulias Telegram-botti [![CircleCI](https://circleci.com/gh/miikka/avulias-botti.svg?style=shield)](https://circleci.com/gh/miikka/avulias-botti)
 
 *Briefly in English:* This is a simple Telegram bot.
 
