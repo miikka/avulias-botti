@@ -1,3 +1,14 @@
+machine:
+    java:
+        version: oraclejdk8
+    environment:
+        BOOT_VERSION: 2.6.0
+dependencies:
+    cache_directories:
+        - "~/.boot/cache/lib"
+        - "~/.boot/cache/bin"
+    override:
+        - "./scripts/setup-circle.sh"
 test:
     override:
-        - bash ./scripts/check-server-builds.sh
+        - "./scripts/check-server-builds.sh"
