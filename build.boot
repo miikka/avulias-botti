@@ -4,13 +4,13 @@
 (set-env! :resource-paths #{"resources" "src"}
           :source-paths   #{"dev"}
           :dependencies   '[[org.clojure/clojure "1.8.0" :scope "provided"]
-                            [aleph "0.4.2-alpha8"]
                             [com.stuartsierra/component "0.3.1"]
                             [compojure "1.5.0"]
                             [environ "1.1.0"]
                             [javax.servlet/servlet-api "2.5"]
                             [morse "0.2.1"]
                             [reloaded.repl "0.2.3"]
+                            [ring/ring-jetty-adapter "1.5.0"]
                             [ring/ring-json "0.4.0"]])
 
 (require '[reloaded.repl :refer [system init start stop go reset reset-all]]
