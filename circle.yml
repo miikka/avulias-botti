@@ -1,0 +1,3 @@
+test:
+    override:
+        - bash ./scripts/check-server-builds.sh

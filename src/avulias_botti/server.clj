@@ -20,5 +20,7 @@
   (ANY "*" [] (route/not-found "Not found :(")))
 
 (defn -main [& [port]]
-  (let [port (Integer. (or port (env :port) 5000))]
-    (run-jetty (-> (api #'app) (wrap-json-body {:keywords? true})) {:port port})))
+  (if (= port "--check")
+    (prn ":ok")
+    (let [port (Integer. (or port (env :port) 5000))]
+      (run-jetty (-> (api #'app) (wrap-json-body {:keywords? true})) {:port port}))))
