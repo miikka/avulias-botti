@@ -1,4 +1,6 @@
-# Avulias Telegram-botti [![CircleCI](https://circleci.com/gh/miikka/avulias-botti.svg?style=shield)](https://circleci.com/gh/miikka/avulias-botti)
+# Avulias Telegram-botti [![CircleCI](https://circleci.com/gh/miikka/avulias-botti.svg?style=shield)][circleci]
+
+[circleci]: https://circleci.com/gh/miikka/avulias-botti
 
 *Briefly in English:* This is a simple Telegram bot.
 
@@ -21,7 +23,8 @@
 
 ## Tuotanto
 
-`master`-branch menee automaattisesti tuotantoon. Ole siis varovainen.
+`master`-branch menee automaattisesti tuotantoon Herokuun, jos
+[CircleCI][circleci]-testit menevät läpi. Ole siis varovainen.
 
 ## Lisenssi
 
