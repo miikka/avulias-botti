@@ -29,7 +29,7 @@
     (reply-to message (format "%s, Anssi Kela -nimesi on _%s Kela_." name name))))
 
 (defn lansimetro [message]
-  (reply-to message "Onko Länsimetro valmis? *Ei*."))
+  (reply-to message "Onko Länsimetro valmis? *Joo!*"))
 
 (handlers/defhandler bot-api
   (handlers/command "huoltomies" {{chat-id :id} :chat} (huoltomies chat-id))
