@@ -10,7 +10,7 @@
                             [javax.servlet/servlet-api "2.5"]
                             [morse "0.2.8" :exclusions [venantius/ultra]]
                             [org.clojure/core.async "0.3.465"]
-                            [reloaded.repl "0.2.3"]
+                            [reloaded.repl "0.2.4"]
                             [ring/ring-jetty-adapter "1.5.0"]
                             [ring/ring-json "0.4.0"]])
 
