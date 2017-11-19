@@ -3,12 +3,13 @@
 
 (set-env! :resource-paths #{"resources" "src"}
           :source-paths   #{"dev"}
-          :dependencies   '[[org.clojure/clojure "1.8.0" :scope "provided"]
+          :dependencies   '[[org.clojure/clojure "1.9.0-RC1" :scope "provided"]
                             [com.stuartsierra/component "0.3.1"]
                             [compojure "1.5.0"]
                             [environ "1.1.0"]
                             [javax.servlet/servlet-api "2.5"]
-                            [morse "0.2.4" :exclusions [venantius/ultra]]
+                            [morse "0.2.8" :exclusions [venantius/ultra]]
+                            [org.clojure/core.async "0.3.465"]
                             [reloaded.repl "0.2.3"]
                             [ring/ring-jetty-adapter "1.5.0"]
                             [ring/ring-json "0.4.0"]])
